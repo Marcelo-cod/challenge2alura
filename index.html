@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,200;0,600;1,100&display=swap" rel="stylesheet">
+    
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <header>
+        <a href="https://www.alura.com.br/"><img class="logo-alura" src="imagens/logoalura.png" alt="Letra a, logo da alura"></a>
+    </header>
+    <main class="container">
+
+        
+               
+        <section class="page-one">
+            
+            <button class="comecar-jogo" onclick="comecarJogo()">Começar a jogar</button>
+            <button class="adicionar-palavra" id="adiciona" onclick="adicionaPalavra()">Adicionar nova palavra</button>
+        </section>
+          
+        <section id="page-two">
+            <textarea id="texto" class="textarea-palavra" placeholder="Digite uma palavra ou frase"></textarea>
+            <img class="maximo-letras" src="imagens/maxcaracter.png" alt="Máximo de 8 letras">
+            <button class="salvar-palavra">Salvar e começar</button>
+            <button class="cancelar" onclick="cancelarPalavra()">Cancelar</button>
+
+        </section>    
+        
+        <section class="page-three">
+            <div>
+                <div class="container-desenho">
+                    <svg height="250" width="200" class="forca">
+                        <!-- Forca -->
+                        <line x1="60" y1="20" x2="60" y2="230" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
+                        <line x1="60" y1="20" x2="140" y2="20" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
+                        <line x1="140" y1="20" x2="140" y2="50" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4" />
+                        <line x1="20" y1="230" x2="100" y2="230"style="stroke:rgb(255,0,0);stroke-width:4"/>
+                        
+                        <!-- Cabeça -->
+                         <circle cx="140" cy="70" r="20" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/> 
+                        <!-- Corpo -->
+                        <line x1="140" y1="90" x2="140" y2="150" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"></line> 
+                        <!-- Braços -->
+                        <line x1="140" y1="120" x2="120" y2="100" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
+                        <line x1="140" y1="120" x2="160" y2="100" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
+                        <!-- Pernas -->
+                        <line x1="140" y1="150" x2="120" y2="180" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
+                        <line x1="140" y1="150" x2="160" y2="180" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
+    
+                    </svg>
+                </div>
+
+            </div>
+            
+            <div class="letras-certas"></textarea> </div>
+            
+            <div class="letras-erradas"></div>
+            <div class="aviso"></div>
+            <div class="teclado">
+                <button class="letras-teclado" id="Q">Q</button>
+                <button class="letras-teclado" id="W">W</button>
+                <button class="letras-teclado" id="E">E</button>
+                <button class="letras-teclado" id="R">R</button>
+                <button class="letras-teclado" id="T">T</button>
+                <button class="letras-teclado" id="Y">Y</button>
+                <button class="letras-teclado" id="U">U</button>
+                <button class="letras-teclado" id="I">I</button>
+                <button class="letras-teclado" id="O">O</button>
+                <button class="letras-teclado" id="P">P</button>
+                <br>
+                <button class="letras-teclado" id="A">A</button>
+                <button class="letras-teclado" id="S">S</button>
+                <button class="letras-teclado" id="D">D</button>
+                <button class="letras-teclado" id="F">F</button>
+                <button class="letras-teclado" id="G">G</button>
+                <button class="letras-teclado" id="H">H</button>
+                <button class="letras-teclado" id="J">J</button>
+                <button class="letras-teclado" id="K">K</button>
+                <button class="letras-teclado" id="L">L</button>
+                <br>
+                <button class="letras-teclado" id="Z">Z</button>
+                <button class="letras-teclado" id="X">X</button>
+                <button class="letras-teclado" id="C">C</button>
+                <button class="letras-teclado" id="V">V</button>
+                <button class="letras-teclado" id="B">B</button>
+                <button class="letras-teclado" id="N">N</button>
+                <button class="letras-teclado" id="M">M</button>
+                
+            </div>  
+            <button class="novo-jogo">Novo jogo</button>
+            <button class="desistir" onclick="desistir()">Desistir
+        </section>
+            
+
+    </main>
+        
+         
+        
+        
+
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
