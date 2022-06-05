@@ -1,20 +1,27 @@
-
+/* Mobile first */
  .container{
-    max-width: 23rem;
+    max-width: 43rem;
     display: flex;
     flex-flow: column wrap;
     gap: 1.5rem 1.2rem;
-
-    padding: 1.3rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
 }
 
 body{
-    background: #F3F5FC;
+    
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.1rem;
+    background-repeat: no-repeat;
+    background: hsla(159, 82%, 55%, 1);
+   
+    background: linear-gradient(90deg, hsla(159, 82%, 55%, 1) 0%, hsla(206, 98%, 48%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2FEAA8", endColorstr="#028CF3", GradientType=1 );
+    
 }
 
 .logo-alura{
@@ -22,21 +29,49 @@ body{
     padding: 5%;
 }
 
+.titulo{
+    
+    margin-top: 2rem;
+    text-align: center;
+    color: #0A3871;
+}
+
 .comecar-jogo{
     width: 100%;
     height: 6.5rem;
-    background: #0A3871;
     border-radius: 1.5rem;
-    color: #FFFFFF;
-    margin: 9.3rem 0 1.2rem 0;
+    color:#0A3871;
+    margin: 5rem 0rem 1rem 0rem;
+    font-weight: bolder;
+    background: hsla(217, 100%, 50%, 1);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    cursor: pointer;
+    
+}
+
+.comecar-jogo:hover{
+    transform: scale(1.1);
 }
 
 .adicionar-palavra{
     width: 100%;
     height: 4.1rem;
-    border: 1px solid #0A3871;
     border-radius: 1.5rem;
     color: #0A3871;
+    font-weight: bolder;
+    background: hsla(217, 100%, 50%, 1);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    cursor: pointer;
+}
+
+.adicionar-palavra:hover{
+    transform: scale(1.1);
 }
 
 .textarea-palavra{
@@ -47,200 +82,323 @@ body{
     outline: none;
     color: #0A3871;
     font-size: 1.5em;
-    margin: 1.8rem 0 17rem 0;
-
+    margin: 1rem 0 1rem 0.5rem;
 }
+
 .salvar-palavra{
     width: 100%;
     height: 4.1rem;
-    background: #0A3871;
     border-radius: 1.5rem;
-    color: white;
     margin-bottom: 0.6rem;
-
-
+    color:#0A3871;
+    font-weight: bolder;
+    background: hsla(217, 100%, 50%, 1);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    cursor: pointer;
 }
+
+.salvar-palavra:hover{
+    transform: scale(1.1);
+}
+
 .cancelar{
     width: 100%;
     height: 4.1rem;
-    border: 1px solid #0A3871;
     border-radius: 1.5rem;
+    color:#0A3871;
+    font-weight: bolder;
+    background: hsla(217, 100%, 50%, 1);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    cursor: pointer;
+}
+
+.cancelar:hover{
+    transform: scale(1.1);
 }
 
 .container-desenho{
     width: 100%;
     height: 12rem;
-    
     text-align: center;
-    margin-top: 2rem;
-
+    margin-top: 0.5rem;
+           
 }
+
 .forca-parte{
     display: none;
-
 }
 
 .letras-certas{
     width: 100%;
-    font-size: 3rem;
-    margin-top: 3rem;
+    font-size: 2rem;
+    margin-top: 0.6rem;
     text-align: center;
     padding: 50px 0px 0px 0px;
+    margin-bottom: 0.5rem;
+    color:#0A3871;
+    
 }
 
 .letras-erradas{
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: center;
-    margin-top: 2.5rem;
-    margin-bottom: 2.6rem;
-}
-.teclado{
-    width: 100%;
-    text-align: center;
-    padding: 10px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color:#0A3871;
+    
 }
 
+.teclado{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 16px;
+    margin-bottom: 0.5rem;
+    
+}
+
+.teclado button{
+    width: 29px;
+    height: 29px;
+    box-shadow: 0px 2px 8px royalblue;
+    border-radius: 8px;
+    border: 1px solid red;
+    cursor: pointer;
+    color: #0A3871;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 12px;
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    
+}
+
+.teclado button:hover{
+    transform: scale(1.3);
+}
 
 .novo-jogo{
     width: 100%;
     height: 4.1rem;
-    background: #0A3871;
+    background: #80ffdb;
     border-radius: 1.5rem;
     color: white;
     margin-bottom: 0.6rem;
+    color:#0A3871;
+    font-weight: bolder;
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    cursor: pointer;
+}
+
+.novo-jogo:hover{
+    transform: scale(1.1);
 }
 
 .desistir{
     width: 100%;
     height: 4.1rem;
-    border: 1px solid #0A3871;
     border-radius: 1.5rem;
+    color:#0A3871;
+    font-weight: bolder;
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    cursor: pointer;
 }
 
-@media screen and (min-width: 37rem) {
+.desistir:hover{
+    transform: scale(1.1);
+}
+
+ .mensagem-popup{
+     display: none;
+     position: absolute;
+     z-index: 1;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: transparent; 
+} 
+.popup{
+    width: 70%;
+    height: 30%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10rem;
+    border: 2px solid rgb(35, 15, 217);
+    border-radius: 25px;
+    text-align: center;
+    background: transparent;
+
+}
+.popup button{
+    width: 100%;
+    height: 40%;
+    border-radius: 1.5rem;
+    color: #0A3871;
+    margin-bottom: 0rem;
+    
+    font-weight: bolder;
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    cursor: pointer;
+}
+
+.popup button:hover{
+    transform: scale(1.1);
+}
+
+.page-one footer{
+    position: absolute;
+    top: 35rem;
+    left: 3rem;
+
+}
+ .link, .git{
+    width: 2rem;
+    padding: 1rem;
+} 
+
+/* Responsividade */
+
+ @media screen and (min-width: 90rem) {
 
     .logo-alura{
         width: 10%;
-        padding: 5%;
+        padding: 5rem 0 0 20rem;
     }
 
-    .container{
+    .titulo{
         position: absolute;
-        left: 14rem;
-        top: 0rem;
-        padding: 0.5rem;
-        margin-top: 0.5rem;
+        top: 5rem;
+        left: 50rem;
     }
 
-    .comecar-jogo{
-        margin-top: 4rem;
-    }
-
-    .textarea-palavra{
-        margin: 0;
-    }
-
-    .container-desenho{
-        width: 23rem;
-        height: 13.5rem;
-    }
-
-    .container-letras{
-        width: 23rem;
-        height: 4rem;
-    }
-}
-
-@media screen and (min-width: 49rem) {
-
-    .logo-alura{
+    .page-one {
         position: absolute;
-        width: 20%;
-        margin-left: -04rem;
-        margin-top: 0.4rem;
+        width: 30rem;
+        margin: 8rem 0rem 0rem 38rem;
     }
 
-    .comecar-jogo{
-        margin-top: 25rem;
+    #page-two{
+        position: absolute;
+        width: 30rem;
+        margin: 6rem 0rem 0rem 25rem;
     }
 
     .textarea-palavra{
         position: absolute;
-        width: 413px;
-        height: 48px;
-        margin-left: -12rem;
-        margin-top: 16rem;
-    }
-
-    .maximo-letras{
-        position: absolute;
-        width: 115px;
-        height: 18px;
-        margin-left: -12rem;
-        margin-top: 55rem;
+        margin: 1rem 0rem 0rem 2rem;
     }
 
     .salvar-palavra{
         position: absolute;
-        margin-top: 56.5rem;
-        margin-left: -12rem;
-        width: 332px;
-        height: 67px;
+        width: 30rem;
+        margin: 25rem 0rem 0rem 1rem;
     }
 
     .cancelar{
         position: absolute;
-        margin-top: 56.5rem;
-        margin-left: 11rem;
-        width: 332px;
-        height: 67px;
+        width: 30rem;
+        margin: 25rem 0rem 0rem 33rem;
+    }
+
+    .maximo-letras{
+        position: absolute;
+        width: 8rem;
+        margin: 23rem 0rem 0rem 1rem;
+    }
+
+    .page-three{
+        position: absolute;
+        width: 30rem;
+        margin: 24rem 0rem 0rem 35rem;
+    }
+
+    .novo-jogo{
+        position: absolute;
+        width: 30rem;
+        margin: 15rem 0rem 0rem -4rem;
+    }
+
+    .desistir{
+        position: absolute;
+        width: 30rem;
+        margin: 15rem 0rem 0rem 28rem;
+
     }
 
     .container-desenho{
         position: absolute;
-        width: 18rem;
-        height: 23.5rem;
-        margin-left: 1rem;
-        margin-top: 15rem;
+        width: 4rem;
+        height: 15.5rem;
+        margin: -20rem 0rem 0rem 16rem;
     }
 
     .container-letras{
         position: absolute;
-        width: 29rem;
-        height: 9.5rem;
-        margin-left: -5rem;
-        margin-top: 38.5rem;
+        width: 23rem;
+        height: 4rem;
+        margin: -7rem 0rem 0rem 15rem;
+        
     }
-    .novo-jogo{
+
+    .teclado{
         position: absolute;
-        margin-top: 56.5rem;
-        margin-left: -12rem;
-        width: 332px;
-        height: 67px;
+        width: 49rem;
+        text-align: center;
+        padding: 10px;
+        margin: 1rem 0rem 0rem 2rem;
+        
     }
-    .desistir{
-        position: absolute;
-        margin-top: 56.5rem;
-        margin-left: 11rem;
-        width: 332px;
-        height: 67px;
+
+    .teclado button{
+    
+        width: 49px;
+        height: 49px;
+        margin: 0.3rem;
+    } 
+    
+    .mensagem-popup{
+        width: 40rem;
+        margin: 1rem 0rem 0rem 38rem;
     }
+
+    .popup button{
+        width: 80%;
+        height: 40%;
+        margin: 3rem 0rem 0rem 0rem;
+    }
+
+    
+.page-one footer{
+    position: absolute;
+    font-size: small;
+    top: 28rem;
 }
 
-@media screen and (min-width: 90rem) {
 
-
-    .container{
-
-        margin-left: 28rem;
-    }
-    .logo-alura{
-        position: absolute;
-        width: 7.5rem;
-        margin-left: 7rem;
-        margin-top: 0.4rem;
-    }
-
-}
+ }    
+        
+     
 

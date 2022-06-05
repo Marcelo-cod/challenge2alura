@@ -13,21 +13,30 @@
 <body>
     <header>
         <a href="https://www.alura.com.br/"><img class="logo-alura" src="imagens/logoalura.png" alt="Letra a, logo da alura"></a>
+        <h1 class="titulo">Jogo da Forca</h1>
     </header>
     <main class="container">
-
-        
-               
+             
         <section class="page-one">
-            
             <button class="comecar-jogo" onclick="comecarJogo()">Começar a jogar</button>
             <button class="adicionar-palavra" id="adiciona" onclick="adicionaPalavra()">Adicionar nova palavra</button>
+            <footer>
+                <div class="rodape">
+                    <p>	
+                        &#169;Developed by Marcelo de Moraes</p>
+                        <a href="https://www.linkedin.com/in/marcelodemoraes/" target="_blank"><img src="imagens/linkedinicon.png" class="link" alt="icone do linkedin"></a>
+                        <a href="https://github.com/Marcelo-cod" target="_blank"><img src="imagens/giticon.png" class="git" alt="icone do github"></a> 
+                </div>
+               
+            </footer>
         </section>
           
         <section id="page-two">
-            <textarea id="texto" class="textarea-palavra" placeholder="Digite uma palavra ou frase"></textarea>
+              
+            <input type="text" id="texto" maxlength="8" class="textarea-palavra" placeholder="Digite uma palavra ou frase"></input>
+                   
             <img class="maximo-letras" src="imagens/maxcaracter.png" alt="Máximo de 8 letras">
-            <button class="salvar-palavra">Salvar e começar</button>
+            <button class="salvar-palavra" onclick="salvarPalavra()">Salvar e começar</button>
             <button class="cancelar" onclick="cancelarPalavra()">Cancelar</button>
 
         </section>    
@@ -37,75 +46,81 @@
                 <div class="container-desenho">
                     <svg height="250" width="200" class="forca">
                         <!-- Forca -->
-                        <line x1="60" y1="20" x2="60" y2="230" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
-                        <line x1="60" y1="20" x2="140" y2="20" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
-                        <line x1="140" y1="20" x2="140" y2="50" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4" />
-                        <line x1="20" y1="230" x2="100" y2="230"style="stroke:rgb(255,0,0);stroke-width:4"/>
-                        
+                        <line x1="60" y1="20" x2="60" y2="230" class="forca-parte" style="stroke:#0A3871;stroke-width:6"/>
+                        <line x1="60" y1="20" x2="140" y2="20" class="forca-parte" style="stroke:#0A3871;stroke-width:6"/>
+                        <line x1="140" y1="20" x2="140" y2="50" class="forca-parte" style="stroke:#0A3871;stroke-width:6" />
+                        <!-- Base da forca -->
+                        <line x1="20" y1="230" x2="100" y2="230"style="stroke: #0A3871;stroke-width:6"/>
                         <!-- Cabeça -->
-                         <circle cx="140" cy="70" r="20" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/> 
+                         <circle cx="140" cy="70" r="20" class="forca-parte" style="stroke:#0A3871;stroke-width:6"/> 
                         <!-- Corpo -->
-                        <line x1="140" y1="90" x2="140" y2="150" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"></line> 
+                        <line x1="140" y1="90" x2="140" y2="150" class="forca-parte" style="stroke:#0A3871;stroke-width:6"></line> 
                         <!-- Braços -->
-                        <line x1="140" y1="120" x2="120" y2="100" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
-                        <line x1="140" y1="120" x2="160" y2="100" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
+                        <line x1="140" y1="110" x2="100" y2="120" class="forca-parte" style="stroke:#0A3871;stroke-width:6"/>
+                        <line x1="140" y1="110" x2="180" y2="120" class="forca-parte" style="stroke:#0A3871;stroke-width:6"/>
                         <!-- Pernas -->
-                        <line x1="140" y1="150" x2="120" y2="180" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
-                        <line x1="140" y1="150" x2="160" y2="180" class="forca-parte" style="stroke:rgb(255,0,0);stroke-width:4"/>
+                        <line x1="140" y1="150" x2="120" y2="180" class="forca-parte" style="stroke:#0A3871;stroke-width:6"/>
+                        <line x1="140" y1="150" x2="160" y2="180" class="forca-parte" style="stroke:#0A3871;stroke-width:6"/>
     
                     </svg>
                 </div>
 
             </div>
+            <div class="container-letras">
+                <div class="letras-certas"  id="display" style="text-transform: uppercase"></div>
+                <div class="letras-erradas"  style="text-transform: uppercase"></div>
+
+            </div>
             
-            <div class="letras-certas"></textarea> </div>
-            
-            <div class="letras-erradas"></div>
             <div class="aviso"></div>
-            <div class="teclado">
-                <button class="letras-teclado" id="Q">Q</button>
-                <button class="letras-teclado" id="W">W</button>
-                <button class="letras-teclado" id="E">E</button>
-                <button class="letras-teclado" id="R">R</button>
-                <button class="letras-teclado" id="T">T</button>
-                <button class="letras-teclado" id="Y">Y</button>
-                <button class="letras-teclado" id="U">U</button>
-                <button class="letras-teclado" id="I">I</button>
-                <button class="letras-teclado" id="O">O</button>
-                <button class="letras-teclado" id="P">P</button>
-                <br>
-                <button class="letras-teclado" id="A">A</button>
-                <button class="letras-teclado" id="S">S</button>
-                <button class="letras-teclado" id="D">D</button>
-                <button class="letras-teclado" id="F">F</button>
-                <button class="letras-teclado" id="G">G</button>
-                <button class="letras-teclado" id="H">H</button>
-                <button class="letras-teclado" id="J">J</button>
-                <button class="letras-teclado" id="K">K</button>
-                <button class="letras-teclado" id="L">L</button>
-                <br>
-                <button class="letras-teclado" id="Z">Z</button>
-                <button class="letras-teclado" id="X">X</button>
-                <button class="letras-teclado" id="C">C</button>
-                <button class="letras-teclado" id="V">V</button>
-                <button class="letras-teclado" id="B">B</button>
-                <button class="letras-teclado" id="N">N</button>
-                <button class="letras-teclado" id="M">M</button>
-                
+            <div class="teclado"  >
+                <button class="letras-teclado" >Q</button>
+                <button class="letras-teclado" >W</button>
+                <button class="letras-teclado"  >E</button>
+                <button class="letras-teclado"  >R</button>
+                <button class="letras-teclado"  >T</button>
+                <button class="letras-teclado"  >Y</button>
+                <button class="letras-teclado"  >U</button>
+                <button class="letras-teclado"  >I</button>
+                <button class="letras-teclado"  >O</button>
+                <button class="letras-teclado"  >P</button>
+                <br> 
+                <button class="letras-teclado" id="btnA">A</button>
+                <button class="letras-teclado" id="btnS" >S</button>
+                <button class="letras-teclado" id="btnD" >D</button>
+                <button class="letras-teclado" id="btnF" >F</button>
+                <button class="letras-teclado" id="btnG" >G</button>
+                <button class="letras-teclado" id="btnH" >H</button>
+                <button class="letras-teclado" id="btnJ" >J</button>
+                <button class="letras-teclado" id="btnK" >K</button>
+                <button class="letras-teclado" id="btnL" >L</button>
+                <br> 
+                <button class="letras-teclado" id="btnZ">Z</button>
+                <button class="letras-teclado" id="btnX">X</button>
+                <button class="letras-teclado" id="btnC">C</button>
+                <button class="letras-teclado" id="btnV">V</button>
+                <button class="letras-teclado" id="btnB">B</button>
+                <button class="letras-teclado" id="btnN">N</button>
+                <button class="letras-teclado" id="btnM">M</button>
+                <br> 
             </div>  
-            <button class="novo-jogo">Novo jogo</button>
+            <button class="novo-jogo" onclick="novoJogo()">Novo jogo</button>
             <button class="desistir" onclick="desistir()">Desistir
         </section>
             
 
     </main>
         
-         
-        
-        
-
+    <div class="mensagem-popup">
+        <div class="popup" id="popu">
+            <h3 id="mensagem"></h3>
+            <button onclick="novoJogo()">OK</button>
+        </div>
+    </div>     
     
     <script src="script.js"></script>
+
+     
     
 </body>
 </html>
