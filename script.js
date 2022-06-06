@@ -15,7 +15,7 @@ const letrasErradas = [];
 let display = document.getElementById("display");
 
 function checaInput(letra){
-    letra = letra.toLowerCase()
+    letra = letra.toLowerCase();
     if(letrasErradas.includes(letra)){
         
     }else{
@@ -119,21 +119,20 @@ function comecarJogo() {
         checaInput(button.innerHTML)
       });
     });
-    console.log(palavras);
-    console.log(palavraSecreta);
+    
 }
+
 
  function salvarPalavra(){
      
     let palavra = document.querySelector(".textarea-palavra");
-    
-    if(palavra.value == ""){
-       alert("Digite uma palavra ou frase:"); 
-    }else{
-        palavras.push(palavra.value);
-        document.getElementById("page-two").style.display = "none";
-        document.querySelector(".page-three").style.display = "block";
-        comecarJogo();
+        if(palavra.value == ""){
+        alert("Digite uma palavra ou frase:"); 
+        }else{
+            palavras.push(palavra.value.normalize("NFD").replace(/[^a-zA-Zs]/g, " ").trim());
+            document.getElementById("page-two").style.display = "none";
+            document.querySelector(".page-three").style.display = "block";
+            comecarJogo();
     }
 }
 
